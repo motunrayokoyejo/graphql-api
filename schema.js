@@ -1,7 +1,7 @@
-const { buildSchema } = require("graphql");
+const { buildSchema } = require('graphql')
 
-buildSchema(gql`
-type Query{
-    hello: String
+module.exports = buildSchema(`
+type Query {
+    calculatePrice (type: String!, margin: Float!,exchangeRate :Int! ) : Float
 }
 `)
